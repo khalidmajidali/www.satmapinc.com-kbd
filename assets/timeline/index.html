@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<!--[if IE ]>    <html lang="en" class="ie"> <![endif]--> 
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
+
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Timeline Slider by pezflash</title>
+		<meta name="description" content="jQuery Plugin for building timelines"/>
+		<meta name="keywords" content=""/>
+		<meta name="robots" content="index, follow"/>
+		
+		<!-- CSS -->
+		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Dosis:500,700' type='text/css'>
+		<link rel="stylesheet" href="js/tipsy/tipsy.css" type="text/css">
+		<link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
+		
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery/jquery-ui-1.11.1.custom.min.js"></script>
+		<script type="text/javascript" src="js/jquery/jquery.ui.touch-punch.js"></script>
+		<script type="text/javascript" src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+		<script type="text/javascript" src="js/tipsy/jquery.tipsy.js"></script>
+		<script type="text/javascript" src="js/audiojs/audio.min.js"></script>
+		<script type="text/javascript" src="js/tinyscrollbar/jquery.tinyscrollbar.js"></script>
+		<script type="text/javascript" src="js/jquery.timeline.js"></script>
+
+		<!-- LOAD PLUGIN ON DOCUMENT READY -->
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+
+				// START THE TIMELINE
+				// using "jQuery" here to protect against conflicts with other libraries like MooTools
+				jQuery.myTimeline();
+			});
+
+		</script>
+		
+	</head>
+	
+	
+	<!-- BODY -->
+	<body>
+		
+		<!-- DEMO CONTAINER (THIS SHOULD BE YOUR DESTINATION DIV) -->
+		<div class="container">
+			
+			<!-- PRELOAD -->
+			<div class="preload">
+				<img src="images/preloader.gif" alt="" />
+			</div>
+			
+			
+			<!-- TIMELINE CONTAINER -->
+			<div id="timeline_container">
+				
+				<!-- TIMELINE -->
+				<div id="timeline" 
+					data-fadeInDelay="3000"
+					data-width="952"
+					data-height="450"
+					data-imagesWidth="3400"
+					data-imagesHeight="265"
+					data-contentWidth="1670"
+					data-contentHeight="174"
+					data-draggerWidth="59"
+					data-draggerHeight="21"
+					data-mouseWheel="1"
+				>
+
+						
+						<!-- VIEWPORT - IMAGES -->
+						<div class="viewport">
+							<div class="images">
+								<img src="images/content_img_1.png" alt="" />
+								<img src="images/content_img_2.png" alt="" />
+								<img src="images/content_img_3.png" alt="" />
+								<img src="images/content_img_4.png" alt="" />
+								<img src="images/content_img_5.png" alt="" />
+								<img src="images/content_img_6.jpg" alt="" />
+							</div>
+						</div>
+						
+						
+						<!-- SCROLLBAR (EDIT CSS FOR STYLING) -->
+						<div class="scrollbar">
+							<div class="track">
+							
+								<!--  MILESTONES MARKS -->
+								<div class="marks">
+									<div id="m0" class="mark" data-xpos="360" data-label="MARCH 1992"></div>
+									<div id="m1" class="mark" data-xpos="520" data-label="2005"></div>
+									<div id="m2" class="mark" data-xpos="700" data-label="2006 - PARTNERS"></div>
+									<div id="m3" class="mark" data-xpos="810" data-label="2010"></div>
+								</div>
+								
+								<div class="dragger"></div>
+							</div>
+						</div>
+						
+						
+						<!-- MILESTONES -->
+						<div class="milestones">
+						
+							<div class="content">
+							
+								
+								<!-- MILESTONE SAMPLE 1 (FIRST) -->
+								<div class="column_first">
+									<div class="c200">
+										<span class="date">NOVEMBER 1978 - STARTUP</span>
+										<span class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, <strong>sed do eiusmod tempor incididunt</strong> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.<br/><br/>Ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </span>
+									</div>
+								</div>
+								
+								<!-- MILESTONE SAMPLE 2 -->
+								<div class="column">
+									<div class="c125">
+										<span class="date">1985</span>
+										<span class="txt">Ut enim ad minim veniam, quis nostrud exercitation ullamco.<br/><br/>Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </span>
+										<span class="thumb"><a href="#extended_text1" data-rel="prettyPhoto" title=""><img src="images/read_more.png" alt="" class="readmore" title="READ MORE" /></a></span>
+										
+										<div id="extended_text1" class="hidden">	<!-- SAMPLE OF HIDDEN DIV WITH EXTENDED CONTENT -->
+											<p><strong>Sample of extended content opened with lightbox</strong><br/><br/>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="http://www.themeforest.net" target="_blank">sample of external link</a>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										</div>
+									</div>
+								</div>
+								
+								<!-- MILESTONE SAMPLE 3 -->
+								<div class="column">
+									<div class="c125">
+										<span class="date">MARCH 1992</span>
+										<span class="txt">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
+										<span class="date"><br/>NOVEMBER 1999</span>
+										<span class="txt">Duis aute irure dolor in voluptate velit esse.</span>
+									</div>
+								</div>
+								
+								<!-- MILESTONE SAMPLE 4 -->
+								<div class="column">
+									<div class="c125">
+										<span class="date">2002 - 20 YEARS<br/>ANNIVERSARY VIDEO</span>
+										<span class="thumb"><a href="http://vimeo.com/24492485" data-rel="prettyPhoto" title="20 Years Anniversary Video" class="video_rollover"><img src="images/video_sample_thumb.png" alt="" /></a></span>
+										<span class="thumb_description">Short video description</span>
+									</div>
+								</div>
+								
+								<!-- MILESTONE SAMPLE 5 -->
+								<div class="column">
+									<div class="c150">
+										<span class="date">2005</span>
+										<span class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+										<span class="big_link"><a href="images/gallery_sample_02.jpg" data-rel="prettyPhoto[sample_gallery]" title="Gallery sample 01">> IMAGE GALLERY</a></span>
+										
+										<div class="hidden">	<!-- SAMPLE OF HIDDEN GALLERY ITEMS -->
+											<a href="images/gallery_sample_01.jpg" data-rel="prettyPhoto[sample_gallery]" title="Gallery sample 02"></a>
+											<a href="images/gallery_sample_03.jpg" data-rel="prettyPhoto[sample_gallery]" title="Gallery sample 03"></a>
+										</div>
+										
+									</div>
+								</div>
+								
+								<!-- MILESTONE SAMPLE 6 -->
+								<div class="column">
+									<div class="c125">
+										<span class="date">2006 - WPA PARTNERS</span>
+										<span class="txt">Sample of external links:</span>
+										<span class="link"><br/><a href="http://themeforest.net/user/pezflash" target="_blank">www.envato.com</a></span>
+										<span class="link"><a href="http://themeforest.net/user/pezflash" target="_blank">www.themeforest.net</a></span>
+										<span class="link"><a href="http://themeforest.net/user/pezflash" target="_blank">www.codecanyon.net</a></span>
+									</div>
+								</div>
+								
+								<!-- MILESTONE SAMPLE 7 -->
+								<div class="column">
+									<div class="c225">
+										<span class="date">2010 - WIDE COLUMN SAMPLE</span>
+										<span><img src="images/logos.png" alt="" /></span>
+										<span class="txt">Ut enim ad minim veniam, quis nostrud exercit ullamco. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </span>	
+										<span class="thumb"><a href="#extended_text2" data-rel="prettyPhoto" title=""><img src="images/read_more.png" alt="" class="readmore" title="READ MORE" /></a></span>
+										
+										<div id="extended_text2" class="hidden">	<!-- SAMPLE OF HIDDEN DIV WITH EXTENDED CONTENT -->
+											<p><strong>Sample of extended content opened with lightbox</strong><br/><br/>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="http://www.themeforest.net" target="_blank">sample of external link</a>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										</div>
+									</div>
+								</div>
+								
+								<!-- MILESTONE SAMPLE 8 -->
+								<div class="column">
+									<div class="c125">
+										<span class="date">2014 - PRESENT</span>
+										<span class="thumb"><a href="images/gallery_sample_01.jpg" data-rel="prettyPhoto[sample_gallery2]" title="10 Years Anniversary Video" class="image_rollover"><img src="images/image_sample_thumb.png" alt="" /></a></span>
+										<span class="thumb_description">Image description</span>
+										
+										<div class="hidden">	<!-- SAMPLE OF HIDDEN GALLERY ITEMS -->
+											<a href="images/gallery_sample_02.jpg" data-rel="prettyPhoto[sample_gallery2]" title="Gallery sample 02"></a>
+											<a href="images/gallery_sample_03.jpg" data-rel="prettyPhoto[sample_gallery2]" title="Gallery sample 03"></a>
+										</div>
+									</div>
+								</div>
+								
+							</div> <!-- end content -->
+							
+						</div> <!-- end milestones -->
+						
+						
+						<!-- AUDIO PLAYER (REMOVE THE FULL DIV IF DON'T NEED IT) -->
+						<div class="audio_player">
+							<audio src="mp3/music.mp3" preload="auto"></audio>
+						</div>
+										
+				
+				</div> <!-- end timeline -->
+				
+				
+				<!-- SHADOW -->
+				<div class="shadow">
+					<img src="images/shadow.png" alt="" />
+				</div>
+			
+			
+			</div> <!-- end timeline container -->
+
+		</div> <!-- end container -->		
+
+	</body>
+	
+</html>

@@ -1,0 +1,261 @@
+﻿/*  
+	-------------------------------------------------------------
+	Cascade Style Sheet - jQuery Timeline slider
+	Description: jQuery Plugin for building web timelines
+	Author: pezflash - http: //www.codecanyon.net/user/pezflash
+	Version: 1.0
+	-------------------------------------------------------------
+*/ 
+
+
+/* ------------------ Global ------------------ */
+body {
+	background: #fff;
+}
+
+strong {
+	font-weight: 700;
+}
+
+img {
+	border: 0px;
+}
+
+.ie a {
+	text-decoration: none;
+	outline: 0;
+}
+
+.container {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -480px;
+}
+
+.shadow {
+	margin: 0 0 0 -480px;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+}
+
+.preload {
+	position: absolute;
+	top: 300px;
+	left: 49%;
+}
+
+
+/* ----------------- Timeline ----------------- */
+
+/* -- Global -- */
+#timeline_container {
+	margin: 25px auto 50px auto;
+	position:relative;
+	background-color:#e9e9e9;
+	opacity: 0;
+	box-shadow: inset 0px 0px 0px 4px #bbbbbb;
+}
+
+#timeline .viewport {
+	/* set your own css here, if needed */
+	box-shadow: inset 0px 0px 0px 4px #bbbbbb;
+}
+
+#timeline .hidden {
+	display: none;
+}
+/* -- End Global -- */
+
+
+
+/* -- Viewport -- */
+#timeline .viewport {
+	overflow: hidden;
+	position: relative;
+	background: url(../images/background.jpg) no-repeat 0 0;
+}
+
+#timeline .viewport .images {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+}
+
+#timeline .viewport .images img{
+	float: left;
+}
+/* -- End Viewport -- */
+
+
+
+/* -- Milestones -- */
+#timeline .milestones {
+	overflow: hidden;
+	position: relative;
+}
+
+#timeline .milestones .content {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+}
+
+#timeline .column_first {
+	float: left;
+	padding: 0px 0px 0px 0px;
+	margin: 14px 0px 0px 20px;
+}
+
+#timeline .column {
+	float: left;
+	padding: 0px 0px 0px 10px;
+	margin: 14px 0px 0px 50px;
+	height: 150px;
+	border-left: 1px solid #ccc;
+}
+
+#timeline .c100 { width: 100px; }
+#timeline .c125 { width: 125px; }
+#timeline .c150 { width: 150px; }
+#timeline .c175 { width: 175px; }
+#timeline .c200 { width: 200px; }
+#timeline .c225 { width: 225px; }
+#timeline .c250 { width: 250px; }
+#timeline .c275 { width: 275px; }
+#timeline .c300 { width: 300px; }
+#timeline .c325 { width: 325px; }
+#timeline .c350 { width: 350px; }
+#timeline .c375 { width: 375px; }
+#timeline .c400 { width: 400px; }
+
+#timeline span {
+	display: block;
+}
+
+#timeline .date {
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 16px;
+	color: #0096ff;
+
+}
+
+#timeline .txt {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 12px;
+	color: #565656;
+	margin: 8px 0px 0px 0px;
+}
+
+#timeline .thumb_description {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 12px;
+	color: #6f6f6f;
+	clear: left;
+}
+
+#timeline .thumb {
+	margin: 14px 0px 0px 0px;
+}
+
+#timeline .video_rollover, #timeline .image_rollover {
+	position:relative;
+	float:left;
+}
+
+#timeline .video_rollover span, #timeline .image_rollover span {
+	left: 0px;
+	top: 0px;
+	display: none;
+	position: absolute;
+}
+#timeline .video_rollover span, #timeline .image_rollover span {
+	background: url('../images/thumb_video_hover.png') no-repeat;
+	width: 113px;
+	height: 67px;
+}
+
+#timeline .image_rollover span {
+	background: url('../images/thumb_image_hover.png') no-repeat;
+	width: 113px;
+	height: 67px;
+}
+
+#timeline .link {
+	font-size: 12px;
+	font-weight: 700;
+}
+
+#timeline .link a {
+	color: #888;	
+}
+	
+#timeline .link a:hover {
+	color: #0096ff;
+	text-decoration: underline;
+}
+
+#timeline .big_link {
+	font-size: 11px;
+	font-weight: 700;
+	margin: 10px 0px 0px 0px;
+	padding: 1px 5px 2px 5px;
+	float: left;
+	background-color: #bbb;
+}
+
+#timeline .big_link a {
+	color: #0096ff;	
+	text-decoration: none;
+}
+	
+#timeline .big_link a:hover {
+	color: #fff;
+}
+
+/* -- End Milestones -- */
+
+
+
+/* -- Scrollbar -- */
+#timeline .scrollbar{
+	background: transparent url(../images/scrollbar_background.png) repeat-x 0 0;
+	margin-top: -4px;
+	position: absolute;
+}
+
+#timeline .dragger {
+	background: transparent url(../images/scrollbar_dragger.png) no-repeat 0 0;
+	cursor: pointer;
+	position: absolute;
+}
+
+#timeline .mark {
+	background: transparent url(../images/scrollbar_mark.png) no-repeat 0 0;
+	cursor: pointer;
+	height: 21px;
+	width: 13px;
+	left: 600px;
+	position: absolute;
+	display: none;
+	opacity: 0;
+}
+/* -- End Scrollbar -- */
+
+
+
+/* -- Miscellaneous -- */
+#timeline .drag_icon {
+	cursor:url(../images/drag_icon.png), e-resize;
+}
+
+#timeline .audio_player {
+	position: absolute;
+	top: 1px;
+	right: 7px;
+}
+/* -- End Miscellaneous -- */
